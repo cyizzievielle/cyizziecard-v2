@@ -16,13 +16,23 @@
   </p>
 
   <p align="center">
-    <a href="https://cyizzievielle.github.io/cyizziecard-v2/"><strong>🌐 View Live Demo</strong></a> •
+    <a href="https://cyizzievielle.github.io/cyizziecard-v2/">
+      <img src="https://img.shields.io/badge/%E2%9C%A8%20LIVE%20PREVIEW-cyizzievielle.github.io%2Fcyizziecard--v2-ff7597?style=for-the-badge&labelColor=0d1117&logo=googlechrome&logoColor=white" alt="Live Website" />
+    </a>
+  </p>
+
+  <p align="center">
+    <a href="https://cyizzievielle.github.io/cyizziecard-v2/"><strong>🌐 Visit Website</strong></a> •
     <a href="#-aesthetic-themes"><strong>🎨 Themes</strong></a> •
     <a href="#-interactive-features"><strong>🎧 Music & Audio</strong></a> •
     <a href="#-getting-started"><strong>🚀 Getting Started</strong></a>
   </p>
 
 </div>
+
+---
+
+> 🔗 **Live Demo URL**: [https://cyizzievielle.github.io/cyizziecard-v2/](https://cyizzievielle.github.io/cyizziecard-v2/)
 
 ---
 
@@ -50,6 +60,7 @@ Switch themes seamlessly on the fly with the floating Gen-Z glassmorphic picker:
 
 ## ✨ Interactive Features
 
+- 🧚‍♀️ **Fairy Dust Cursor Trail** — Shimmering 4-point fairy stars and radiant dust particles following the mouse in real time, adapting colors to each theme with sparkle bursts on click.
 - 💿 **Real Vinyl Disc Player** — Spinning album art synchronization with interactive audio visualizer equalizer bars.
 - 🎵 **Instant Track Gallery** — 8 Cigarettes After Sex tracks with real album artwork, instant live switching, and embedded Spotify integration.
 - 🎴 **CAS Lyric Deck** — Draw randomized melancholic song lyrics and album quotes with smooth flip transitions.
