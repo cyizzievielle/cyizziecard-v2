@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,1,2,3&height=180&section=header&text=cyizziecard%20v2&fontSize=42&fontAlignY=38&desc=quiet%20nights%20%E2%80%A2%20strawberry%20matcha%20glow%20%E2%80%A2%20cigarettes%20after%20sex&descAlignY=62&descAlign=50&theme=dark" alt="cyizziecard banner" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,1,2,3&height=180&section=header&text=cyizziecard%20v2&fontSize=42&fontAlignY=38&desc=quiet%20nights%20%E2%80%A2%20minimal%20noise%20%E2%80%A2%20cigarettes%20after%20sex&descAlignY=62&descAlign=50&theme=dark" alt="cyizziecard banner" width="100%" />
 
   <p align="center">
     <b>Aesthetic Personal Bio Card & Ambient Interactive Space</b>
