@@ -2554,6 +2554,303 @@
       }
     }
 
+    /* ===== ULTRA POLISHED MOBILE / SMARTPHONE FRIENDLY STYLES ===== */
+    @media (max-width: 720px) {
+      nav.navDesk {
+        display: none !important;
+      }
+
+      .mActions {
+        display: flex !important;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .mBtn {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+      }
+
+      .wrap {
+        padding: 8px 10px calc(85px + var(--npHeight));
+      }
+
+      header {
+        top: 6px;
+        padding: 7px 11px;
+        border-radius: 16px;
+      }
+
+      .brand {
+        gap: 8px;
+      }
+
+      .brandText {
+        max-width: 48vw;
+        font-size: 12.5px;
+      }
+
+      .brandText small {
+        display: none !important; /* Keep mobile header clean on 1 row */
+      }
+
+      .hero {
+        margin-top: 8px;
+        padding: 14px 12px;
+        border-radius: 18px;
+      }
+
+      .topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        width: 100%;
+      }
+
+      .topline .pill {
+        font-size: 10.5px;
+        padding: 5px 9px;
+      }
+
+      .themeTrigger {
+        font-size: 11px;
+        padding: 5px 10px;
+        gap: 6px;
+      }
+
+      .themeMenu {
+        max-width: calc(100vw - 24px) !important;
+        right: 0 !important;
+      }
+
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 6px;
+      }
+
+      .pp {
+        width: 74px;
+        height: 74px;
+      }
+
+      .hero-title {
+        font-size: 27px !important;
+        line-height: 1.15;
+        margin: 2px 0 6px;
+      }
+
+      .sub {
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .statusline {
+        gap: 6px;
+        margin-top: 8px;
+      }
+
+      .status {
+        font-size: 11px;
+        padding: 5px 9px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 10px;
+      }
+
+      .actions .btn {
+        padding: 7px 11px;
+        font-size: 11.5px;
+        border-radius: 12px;
+      }
+
+      .actions .tiny {
+        width: 100%;
+        display: block;
+        margin-top: 3px;
+        font-size: 11px;
+      }
+
+      .content {
+        margin-top: 10px;
+        gap: 8px;
+      }
+
+      .mini {
+        padding: 12px;
+        border-radius: 16px;
+      }
+
+      .mini b {
+        font-size: 11.5px;
+      }
+
+      .mini p, .mini .list {
+        font-size: 12px;
+      }
+
+      .sipPreviewCup {
+        font-size: 10.5px;
+        height: 26px;
+      }
+
+      .sipRow {
+        font-size: 11px;
+      }
+
+      .sipRow input[type="range"] {
+        height: 6px;
+      }
+
+      .lyricCardInner {
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .lyricThumb {
+        width: 44px;
+        height: 44px;
+      }
+
+      .lyricQuote {
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .iconGrid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .app {
+        padding: 9px 11px;
+        border-radius: 14px;
+      }
+
+      .activeTrackCard {
+        padding: 12px 14px;
+        gap: 12px;
+        border-radius: 16px;
+      }
+
+      .trackCoverBox {
+        width: 68px;
+        height: 68px;
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+
+      .vinylPeek {
+        width: 54px;
+        height: 54px;
+        right: -14px;
+        top: 7px;
+      }
+
+      #activeTitle {
+        font-size: 15px !important;
+      }
+
+      #activeArtist {
+        font-size: 11px !important;
+        margin-bottom: 6px !important;
+      }
+
+      #activeAlbumBadge {
+        font-size: 9.5px !important;
+        padding: 2px 7px !important;
+      }
+
+      .tracklistGrid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        margin-top: 10px;
+      }
+
+      .trackItem {
+        padding: 7px 9px;
+        gap: 9px;
+        border-radius: 14px;
+      }
+
+      .trackThumb {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+      }
+
+      .trackItemTitle {
+        font-size: 11.5px;
+      }
+
+      .trackItemAlbum {
+        font-size: 10px;
+      }
+
+      /* Compact and sleek Now Playing bottom bar on mobile */
+      .now {
+        width: calc(100% - 14px);
+        bottom: 8px;
+      }
+
+      .nowInner {
+        padding: 7px 10px;
+        gap: 7px;
+        border-radius: 16px;
+      }
+
+      .disc {
+        width: 30px;
+        height: 30px;
+      }
+
+      .eqBars {
+        display: none; /* Hide on mobile so song title has enough room without truncation */
+      }
+
+      .npTitle {
+        font-size: 11px;
+        max-width: 42vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .npSub {
+        font-size: 9.5px;
+        max-width: 42vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .npBtn {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+      }
+
+      .topbtn {
+        bottom: calc(12px + var(--npHeight));
+        right: 10px;
+        padding: 7px 10px;
+        font-size: 10.5px;
+      }
+
+      .toast {
+        bottom: calc(14px + var(--npHeight));
+        font-size: 11px;
+        padding: 7px 13px;
+      }
+    }
+
     /* ===== AMBIENT CANVAS & PARTICLES ===== */
     #ambientCanvas {
       position: fixed;
