@@ -2564,6 +2564,16 @@
       z-index: 0;
     }
 
+    /* ===== FAIRY DUST CURSOR TRAIL CANVAS ===== */
+    #fairyCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999999;
+    }
+
     /* floating click reaction */
     .floating-reaction {
       position: fixed;
@@ -2937,6 +2947,7 @@
 
 <body class="theme-strawberry-matcha">
   <canvas id="ambientCanvas" aria-hidden="true"></canvas>
+  <canvas id="fairyCanvas" aria-hidden="true"></canvas>
   <div class="progress" aria-hidden="true"></div>
 
   <div class="wrap">
@@ -4342,6 +4353,187 @@
       requestAnimationFrame(animateParticles);
     }
     animateParticles();
+
+    // ===== FAIRY DUST CURSOR TRAIL ENGINE =====
+    const fairyCanvas = document.getElementById("fairyCanvas");
+    const fairyCtx = fairyCanvas?.getContext("2d");
+    let fairyParticles = [];
+    let lastMouseX = null;
+    let lastMouseY = null;
+    let isFairyLoopRunning = false;
+
+    function resizeFairyCanvas() {
+      if (!fairyCanvas) return;
+      fairyCanvas.width = window.innerWidth;
+      fairyCanvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeFairyCanvas);
+    resizeFairyCanvas();
+
+    function getThemeFairyColors() {
+      if (document.body.classList.contains("theme-monochrome")) {
+        return ["#ffffff", "#f5f5f5", "#e5e5e5", "#d4d4d4", "#a3a3a3"];
+      }
+      if (document.body.classList.contains("theme-rainy-city")) {
+        return ["#38bdf8", "#818cf8", "#60a5fa", "#e0f2fe", "#ffffff"];
+      }
+      if (document.body.classList.contains("theme-pixel")) {
+        return ["#00f5ff", "#ff00aa", "#aaff00", "#ffee00"];
+      }
+      if (document.body.classList.contains("theme-kidcore")) {
+        return ["#ffd166", "#ff4d6d", "#00c48c", "#ff8fab", "#7209b7", "#4cc9f0"];
+      }
+      // Default: Strawberry Matcha fairy dust
+      return ["#ff7597", "#ffadc2", "#b4e2a8", "#88c278", "#fff0f3", "#ffd166"];
+    }
+
+    class FairySparkle {
+      constructor(x, y, vx = 0, vy = 0, isBurst = false) {
+        this.x = x + (Math.random() - 0.5) * (isBurst ? 14 : 6);
+        this.y = y + (Math.random() - 0.5) * (isBurst ? 14 : 6);
+        const speed = isBurst ? Math.random() * 2.8 + 1.2 : Math.random() * 0.9 + 0.3;
+        const angle = isBurst ? Math.random() * Math.PI * 2 : Math.PI / 2 + (Math.random() - 0.5) * 1.2;
+        this.vx = Math.cos(angle) * speed + vx * 0.15;
+        this.vy = Math.sin(angle) * speed + vy * 0.15 + (isBurst ? 0 : 0.45);
+        this.gravity = 0.04;
+        this.friction = 0.985;
+        this.size = Math.random() * (isBurst ? 7 : 5.5) + 3;
+        this.life = 1.0;
+        this.decay = Math.random() * 0.025 + 0.018;
+        this.rot = Math.random() * Math.PI * 2;
+        this.rotSpeed = (Math.random() - 0.5) * 0.12;
+        this.type = Math.floor(Math.random() * 4); // 0: 4-pt fairy star, 1: diamond star, 2: circle glow, 3: cross
+        const colors = getThemeFairyColors();
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+        this.twinkleRate = Math.random() * 0.2 + 0.1;
+        this.twinklePhase = Math.random() * Math.PI * 2;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.vy += this.gravity;
+        this.vx *= this.friction;
+        this.rot += this.rotSpeed;
+        this.life -= this.decay;
+        this.twinklePhase += this.twinkleRate;
+      }
+
+      draw(c) {
+        if (this.life <= 0) return;
+        c.save();
+        c.translate(this.x, this.y);
+        c.rotate(this.rot);
+
+        const twinkle = 0.75 + Math.sin(this.twinklePhase) * 0.25;
+        const alpha = Math.max(0, this.life * twinkle);
+        c.globalAlpha = alpha;
+        c.fillStyle = this.color;
+        c.shadowColor = this.color;
+        c.shadowBlur = 8 * alpha;
+
+        const isPixel = document.body.classList.contains("theme-pixel");
+        if (isPixel) {
+          const s = Math.round(this.size * alpha);
+          c.fillRect(-s / 2, -s / 2, s, s);
+          c.restore();
+          return;
+        }
+
+        const curSize = this.size * alpha;
+
+        if (this.type === 0 || this.type === 1) {
+          // 4-point fairy star (iconic pinched star)
+          c.beginPath();
+          const rOuter = curSize * (this.type === 0 ? 1.3 : 1.0);
+          const rInner = curSize * 0.22;
+          for (let i = 0; i < 4; i++) {
+            const a = (i * Math.PI) / 2;
+            const xo = Math.cos(a) * rOuter;
+            const yo = Math.sin(a) * rOuter;
+            const mi = a + Math.PI / 4;
+            const xi = Math.cos(mi) * rInner;
+            const yi = Math.sin(mi) * rInner;
+            if (i === 0) c.moveTo(xo, yo);
+            else c.lineTo(xo, yo);
+            c.lineTo(xi, yi);
+          }
+          c.closePath();
+          c.fill();
+        } else if (this.type === 2) {
+          // Circular fairy glow dot
+          c.beginPath();
+          c.arc(0, 0, curSize * 0.65, 0, Math.PI * 2);
+          c.fill();
+        } else {
+          // Delicate cross sparkle
+          c.fillRect(-curSize * 0.7, -curSize * 0.15, curSize * 1.4, curSize * 0.3);
+          c.fillRect(-curSize * 0.15, -curSize * 0.7, curSize * 0.3, curSize * 1.4);
+        }
+
+        c.restore();
+      }
+    }
+
+    function addFairyDust(x, y, vx = 0, vy = 0, isBurst = false, count = 2) {
+      if (!fairyCanvas) return;
+      for (let i = 0; i < count; i++) {
+        fairyParticles.push(new FairySparkle(x, y, vx, vy, isBurst));
+      }
+      if (fairyParticles.length > 120) {
+        fairyParticles.splice(0, fairyParticles.length - 120);
+      }
+      startFairyLoop();
+    }
+
+    function renderFairyDust() {
+      if (!fairyCtx || !fairyCanvas) return;
+      fairyCtx.clearRect(0, 0, fairyCanvas.width, fairyCanvas.height);
+
+      for (let i = fairyParticles.length - 1; i >= 0; i--) {
+        const p = fairyParticles[i];
+        p.update();
+        p.draw(fairyCtx);
+        if (p.life <= 0) {
+          fairyParticles.splice(i, 1);
+        }
+      }
+
+      if (fairyParticles.length > 0) {
+        requestAnimationFrame(renderFairyDust);
+      } else {
+        isFairyLoopRunning = false;
+      }
+    }
+
+    function startFairyLoop() {
+      if (!isFairyLoopRunning) {
+        isFairyLoopRunning = true;
+        requestAnimationFrame(renderFairyDust);
+      }
+    }
+
+    window.addEventListener("pointermove", (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      if (lastMouseX !== null && lastMouseY !== null) {
+        const dx = x - lastMouseX;
+        const dy = y - lastMouseY;
+        const dist = Math.hypot(dx, dy);
+        if (dist > 4) {
+          const count = Math.min(4, Math.max(1, Math.floor(dist / 8)));
+          addFairyDust(x, y, dx * 0.2, dy * 0.2, false, count);
+        }
+      } else {
+        addFairyDust(x, y, 0, 0, false, 2);
+      }
+      lastMouseX = x;
+      lastMouseY = y;
+    }, { passive: true });
+
+    window.addEventListener("pointerdown", (e) => {
+      addFairyDust(e.clientX, e.clientY, 0, 0, true, 12);
+    }, { passive: true });
   </script>
 </body>
 
