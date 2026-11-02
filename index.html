@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>cyizzie — userwholovecas</title>
   <meta name="description" content="cyizzie — calm nights, minimal noise, CAS vibe." />
   <meta name="theme-color" content="#0e1511" />
@@ -2554,302 +2554,7 @@
       }
     }
 
-    /* ===== ULTRA POLISHED MOBILE / SMARTPHONE FRIENDLY STYLES ===== */
-    @media (max-width: 720px) {
-      nav.navDesk {
-        display: none !important;
-      }
-
-      .mActions {
-        display: flex !important;
-        gap: 8px;
-        align-items: center;
-      }
-
-      .mBtn {
-        width: 38px;
-        height: 38px;
-        font-size: 15px;
-      }
-
-      .wrap {
-        padding: 8px 10px calc(85px + var(--npHeight));
-      }
-
-      header {
-        top: 6px;
-        padding: 7px 11px;
-        border-radius: 16px;
-      }
-
-      .brand {
-        gap: 8px;
-      }
-
-      .brandText {
-        max-width: 48vw;
-        font-size: 12.5px;
-      }
-
-      .brandText small {
-        display: none !important; /* Keep mobile header clean on 1 row */
-      }
-
-      .hero {
-        margin-top: 8px;
-        padding: 14px 12px;
-        border-radius: 18px;
-      }
-
-      .topline {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 6px;
-        width: 100%;
-      }
-
-      .topline .pill {
-        font-size: 10.5px;
-        padding: 5px 9px;
-      }
-
-      .themeTrigger {
-        font-size: 11px;
-        padding: 5px 10px;
-        gap: 6px;
-      }
-
-      .themeMenu {
-        max-width: calc(100vw - 24px) !important;
-        right: 0 !important;
-      }
-
-      .profile {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        margin-top: 6px;
-      }
-
-      .pp {
-        width: 74px;
-        height: 74px;
-      }
-
-      .hero-title {
-        font-size: 27px !important;
-        line-height: 1.15;
-        margin: 2px 0 6px;
-      }
-
-      .sub {
-        font-size: 12px;
-        line-height: 1.55;
-      }
-
-      .statusline {
-        gap: 6px;
-        margin-top: 8px;
-      }
-
-      .status {
-        font-size: 11px;
-        padding: 5px 9px;
-      }
-
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-        margin-top: 10px;
-      }
-
-      .actions .btn {
-        padding: 7px 11px;
-        font-size: 11.5px;
-        border-radius: 12px;
-      }
-
-      .actions .tiny {
-        width: 100%;
-        display: block;
-        margin-top: 3px;
-        font-size: 11px;
-      }
-
-      .content {
-        margin-top: 10px;
-        gap: 8px;
-      }
-
-      .mini {
-        padding: 12px;
-        border-radius: 16px;
-      }
-
-      .mini b {
-        font-size: 11.5px;
-      }
-
-      .mini p, .mini .list {
-        font-size: 12px;
-      }
-
-      .sipPreviewCup {
-        font-size: 10.5px;
-        height: 26px;
-      }
-
-      .sipRow {
-        font-size: 11px;
-      }
-
-      .sipRow input[type="range"] {
-        height: 6px;
-      }
-
-      .lyricCardInner {
-        padding: 10px;
-        gap: 10px;
-      }
-
-      .lyricThumb {
-        width: 44px;
-        height: 44px;
-      }
-
-      .lyricQuote {
-        font-size: 12px;
-        line-height: 1.45;
-      }
-
-      .iconGrid {
-        grid-template-columns: 1fr;
-        gap: 7px;
-      }
-
-      .app {
-        padding: 9px 11px;
-        border-radius: 14px;
-      }
-
-      .activeTrackCard {
-        padding: 12px 14px;
-        gap: 12px;
-        border-radius: 16px;
-      }
-
-      .trackCoverBox {
-        width: 68px;
-        height: 68px;
-        margin-right: 20px;
-        margin-bottom: 0;
-      }
-
-      .vinylPeek {
-        width: 54px;
-        height: 54px;
-        right: -14px;
-        top: 7px;
-      }
-
-      #activeTitle {
-        font-size: 15px !important;
-      }
-
-      #activeArtist {
-        font-size: 11px !important;
-        margin-bottom: 6px !important;
-      }
-
-      #activeAlbumBadge {
-        font-size: 9.5px !important;
-        padding: 2px 7px !important;
-      }
-
-      .tracklistGrid {
-        grid-template-columns: 1fr;
-        gap: 7px;
-        margin-top: 10px;
-      }
-
-      .trackItem {
-        padding: 7px 9px;
-        gap: 9px;
-        border-radius: 14px;
-      }
-
-      .trackThumb {
-        width: 36px;
-        height: 36px;
-        border-radius: 8px;
-      }
-
-      .trackItemTitle {
-        font-size: 11.5px;
-      }
-
-      .trackItemAlbum {
-        font-size: 10px;
-      }
-
-      /* Compact and sleek Now Playing bottom bar on mobile */
-      .now {
-        width: calc(100% - 14px);
-        bottom: 8px;
-      }
-
-      .nowInner {
-        padding: 7px 10px;
-        gap: 7px;
-        border-radius: 16px;
-      }
-
-      .disc {
-        width: 30px;
-        height: 30px;
-      }
-
-      .eqBars {
-        display: none; /* Hide on mobile so song title has enough room without truncation */
-      }
-
-      .npTitle {
-        font-size: 11px;
-        max-width: 42vw;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .npSub {
-        font-size: 9.5px;
-        max-width: 42vw;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      .npBtn {
-        width: 30px;
-        height: 30px;
-        font-size: 11px;
-      }
-
-      .topbtn {
-        bottom: calc(12px + var(--npHeight));
-        right: 10px;
-        padding: 7px 10px;
-        font-size: 10.5px;
-      }
-
-      .toast {
-        bottom: calc(14px + var(--npHeight));
-        font-size: 11px;
-        padding: 7px 13px;
-      }
-    }
+    /* Note: Master mobile responsive styles consolidated at bottom of style block for strict cascade */
 
     /* ===== AMBIENT CANVAS & PARTICLES ===== */
     #ambientCanvas {
@@ -3102,14 +2807,6 @@
       gap: 14px;
     }
 
-    @media (max-width: 520px) {
-      .lyricCardInner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-    }
-
     .lyricThumb {
       width: 64px;
       height: 64px;
@@ -3236,8 +2933,626 @@
       user-select: none;
     }
 
-    .sipPreviewCup.sipped {
-      transform: scale(1.05);
+    /* Guest note form base styling */
+    .guestNoteForm {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .guestNoteForm input {
+      flex: 1;
+      min-width: 200px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 180, 202, .18);
+      background: rgba(255, 255, 255, .03);
+      color: rgba(255, 255, 255, .90);
+      outline: none;
+      box-sizing: border-box;
+      font-size: 12.5px;
+    }
+
+    .guestNoteBtns {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* ====================================================================
+       MASTER RESPONSIVE STYLESHEET (OPTIMIZED FOR ANDROID & IPHONE)
+       ==================================================================== */
+    @media (max-width: 720px) {
+      :root {
+        --npHeight: 54px;
+      }
+
+      body {
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      nav.navDesk {
+        display: none !important;
+      }
+
+      .mActions {
+        display: flex !important;
+        gap: 7px;
+        align-items: center;
+        flex: 0 0 auto;
+      }
+
+      .mBtn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        padding: 0;
+      }
+
+      .wrap {
+        padding: max(8px, env(safe-area-inset-top, 8px)) max(10px, env(safe-area-inset-right, 10px)) calc(85px + var(--npHeight) + env(safe-area-inset-bottom, 0px)) max(10px, env(safe-area-inset-left, 10px));
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      header {
+        top: max(6px, env(safe-area-inset-top, 6px));
+        padding: 7px 11px;
+        border-radius: 16px;
+        gap: 8px;
+      }
+
+      .brand {
+        gap: 8px;
+        min-width: 0;
+        flex: 1;
+      }
+
+      .brandText {
+        font-size: 13px;
+        font-weight: 800;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+
+      .brandText small {
+        display: none !important; /* Keep mobile header clean on 1 row */
+      }
+
+      .hero {
+        margin-top: 8px;
+        padding: 14px 12px;
+        border-radius: 20px;
+      }
+
+      .topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .topline .pill {
+        font-size: 11px;
+        padding: 5px 10px;
+        gap: 6px;
+        flex: 0 0 auto;
+        white-space: nowrap;
+      }
+
+      .themePicker {
+        flex: 0 0 auto;
+      }
+
+      .themeTrigger {
+        font-size: 11px;
+        padding: 5px 9px 5px 8px;
+        gap: 5px;
+        white-space: nowrap;
+      }
+
+      .themeMenu {
+        max-width: min(320px, calc(100vw - 20px)) !important;
+        right: 0 !important;
+      }
+
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-top: 4px;
+      }
+
+      .pp {
+        width: 72px;
+        height: 72px;
+      }
+
+      .hero-title {
+        font-size: clamp(23px, 6.5vw, 29px) !important;
+        line-height: 1.15;
+        margin: 2px 0 6px;
+        letter-spacing: -0.01em;
+      }
+
+      .sub {
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .statusline {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 8px;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .status {
+        font-size: 11px;
+        padding: 5px 9px;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      /* Modern balanced button grid on smartphone */
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+        margin-top: 12px;
+        width: 100%;
+      }
+
+      .actions .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 8px 10px;
+        font-size: 11.5px;
+        border-radius: 12px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .actions #loveBtn {
+        grid-column: 1 / -1; /* full width highlight action */
+        padding: 9px 12px;
+        font-weight: 800;
+      }
+
+      .actions .tiny {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 11px;
+        margin-top: 3px;
+        opacity: .75;
+      }
+
+      .content {
+        margin-top: 10px;
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .mini {
+        padding: 12px 14px;
+        border-radius: 16px;
+      }
+
+      .mini b {
+        font-size: 11.5px;
+      }
+
+      .mini p, .mini .list {
+        font-size: 12px;
+      }
+
+      /* CAS Lyric Deck */
+      .lyricCard {
+        padding: 11px 12px;
+        border-radius: 14px;
+      }
+
+      .lyricCardInner {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 11px !important;
+      }
+
+      .lyricThumb {
+        width: 48px !important;
+        height: 48px !important;
+        border-radius: 10px !important;
+        flex: 0 0 48px !important;
+      }
+
+      .lyricContent {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .lyricQuote {
+        font-size: 12px !important;
+        line-height: 1.45 !important;
+        margin: 0 0 4px !important;
+      }
+
+      .lyricMeta {
+        gap: 6px !important;
+      }
+
+      .lyricMeta span {
+        font-size: 11px !important;
+      }
+
+      .lyricMeta .pill {
+        font-size: 9.5px !important;
+        padding: 2px 7px !important;
+      }
+
+      /* Sip Lab Mobile Sliders */
+      .sipWidget {
+        padding: 12px;
+        border-radius: 14px;
+      }
+
+      .sipPreviewCup {
+        height: 30px;
+        font-size: 11px;
+        border-radius: 10px;
+      }
+
+      .sipSliders {
+        display: grid;
+        gap: 10px;
+        margin: 10px 0 8px;
+      }
+
+      .sipRow {
+        display: grid !important;
+        grid-template-columns: 1fr auto !important;
+        align-items: center !important;
+        gap: 5px 0 !important;
+        font-size: 11.5px !important;
+      }
+
+      .sipRow > span:first-child {
+        grid-row: 1;
+        grid-column: 1;
+        font-weight: 700;
+        color: rgba(255, 255, 255, .88);
+      }
+
+      .sipRow > span:last-child {
+        grid-row: 1;
+        grid-column: 2;
+        text-align: right;
+        font-weight: 800;
+        color: var(--strawberry);
+      }
+
+      .sipRow input[type="range"] {
+        grid-row: 2;
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        height: 8px !important;
+        border-radius: 999px !important;
+        margin-top: 4px !important;
+      }
+
+      /* Jar of Midnight */
+      .jarCardInner {
+        padding: 11px 12px;
+        gap: 11px;
+        border-radius: 14px;
+      }
+
+      .jarBottleBox {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        border-radius: 12px;
+        flex: 0 0 44px;
+      }
+
+      .jarQuote {
+        font-size: 12px;
+        line-height: 1.45;
+        margin: 0 0 5px;
+      }
+
+      /* Social Icons Grid */
+      .iconGrid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .app {
+        padding: 9px 12px;
+        border-radius: 14px;
+      }
+
+      .icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+      }
+
+      .appName {
+        font-size: 12.5px;
+      }
+
+      .appHint {
+        font-size: 11px;
+      }
+
+      /* Guest Note Responsive */
+      .guestNoteForm {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+      }
+
+      .guestNoteForm input {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      .guestNoteBtns {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+        width: 100% !important;
+      }
+
+      .guestNoteBtns .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+
+      /* Music & Album Showcase */
+      #music {
+        margin-top: 10px !important;
+        padding: 14px 12px !important;
+        border-radius: 20px !important;
+      }
+
+      .activeTrackCard {
+        padding: 12px;
+        gap: 12px;
+        border-radius: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .trackCoverBox {
+        width: 72px;
+        height: 72px;
+        margin-right: 0;
+        margin-bottom: 2px;
+      }
+
+      .vinylPeek {
+        width: 56px;
+        height: 56px;
+        right: -16px;
+        top: 8px;
+      }
+
+      .trackInfoBox {
+        width: 100%;
+      }
+
+      #activeTitle {
+        font-size: 16px !important;
+        margin: 4px 0 2px !important;
+      }
+
+      #activeArtist {
+        font-size: 11.5px !important;
+        margin-bottom: 8px !important;
+      }
+
+      #activeAlbumBadge {
+        font-size: 10px !important;
+        padding: 3px 8px !important;
+      }
+
+      .trackInfoBox > div {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 7px !important;
+        width: 100% !important;
+      }
+
+      .trackInfoBox .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 7px 10px !important;
+        font-size: 11px !important;
+        box-sizing: border-box;
+      }
+
+      .tracklistGrid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        margin-top: 10px;
+      }
+
+      .trackItem {
+        padding: 7px 9px;
+        gap: 10px;
+        border-radius: 12px;
+      }
+
+      .trackThumb {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        background: radial-gradient(circle, #2a2a2a, #111);
+      }
+
+      .trackItemTitle {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 60vw;
+      }
+
+      .trackItemAlbum {
+        font-size: 10px;
+      }
+
+      #music a.primary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      /* Now Playing Floating Bar (iPhone Safe Area & Android friendly) */
+      .now {
+        width: calc(100% - 16px);
+        max-width: 480px;
+        bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .nowInner {
+        padding: 6px 9px;
+        gap: 7px;
+        border-radius: 16px;
+      }
+
+      .disc {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 32px;
+      }
+
+      .eqBars {
+        display: none !important;
+      }
+
+      .npText {
+        min-width: 0;
+        flex: 1;
+      }
+
+      .npTitle {
+        font-size: 11px;
+        max-width: 36vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .npSub {
+        font-size: 9.5px;
+        max-width: 36vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .npBtns {
+        gap: 4px;
+        flex: 0 0 auto;
+      }
+
+      .npBtn {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        border-radius: 999px;
+        padding: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .topbtn {
+        bottom: calc(12px + var(--npHeight) + env(safe-area-inset-bottom, 0px));
+        right: max(10px, env(safe-area-inset-right, 10px));
+        padding: 6px 9px;
+        font-size: 10.5px;
+      }
+
+      .toast {
+        bottom: calc(16px + var(--npHeight) + env(safe-area-inset-bottom, 0px));
+        font-size: 11px;
+        padding: 6px 12px;
+      }
+
+      /* Mobile Drawer Sheet */
+      .mSheet {
+        width: min(340px, 86vw);
+        height: 100dvh;
+        min-height: 100vh;
+        padding: max(16px, env(safe-area-inset-top, 16px)) 14px max(18px, env(safe-area-inset-bottom, 18px));
+      }
+
+      .mClose {
+        top: max(12px, env(safe-area-inset-top, 12px));
+        right: max(12px, env(safe-area-inset-right, 12px));
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+    }
+
+    /* Small Screen Specific Polish (Android ~360px & iPhone SE ~375px) */
+    @media (max-width: 380px) {
+      .wrap {
+        padding-left: max(6px, env(safe-area-inset-left, 6px));
+        padding-right: max(6px, env(safe-area-inset-right, 6px));
+      }
+
+      .brandText {
+        font-size: 12px;
+        max-width: 120px;
+      }
+
+      .mBtn {
+        width: 33px;
+        height: 33px;
+        font-size: 13px;
+      }
+
+      .hero-title {
+        font-size: 22px !important;
+      }
+
+      .actions .btn {
+        font-size: 10.5px;
+        padding: 7px 6px;
+      }
+
+      .npTitle, .npSub {
+        max-width: 28vw;
+      }
+
+      .topline .pill, .themeTrigger {
+        font-size: 10px;
+        padding: 4px 7px;
+      }
     }
   </style>
 </head>
@@ -3309,7 +3624,7 @@
         </nav>
 
         <div class="mBottom">
-          <button class="mCTA" type="button" id="mCtaBtn">Join Discord</button>
+          <button class="mCTA" type="button" id="mCtaBtn">💬 Open Discord Profile</button>
         </div>
       </aside>
     </div>
@@ -3317,7 +3632,7 @@
     <!-- HERO -->
     <section class="card hero" id="top">
       <div class="topline" style="position:relative; z-index:100;">
-        <div class="pill"><span class="live"></span> strawberry matcha</div>
+        <div class="pill"><span class="live"></span> calm nights • matcha</div>
         
         <!-- GEN-Z AESTHETIC THEME PICKER DROPDOWN -->
         <div class="themePicker" id="themePicker">
@@ -3407,10 +3722,10 @@
           <div class="actions">
             <a class="btn primary" href="#music">🎧 play</a>
             <button class="btn" id="copyBtn" type="button">📋 copy email</button>
-            <button class="btn" id="copyUserBtn" type="button">🧸 copy username</button>
+            <a class="btn" id="discordBtn" href="https://discord.com/users/776022128092774410" target="_blank" rel="noreferrer">💬 discord</a>
             <button class="btn" id="shareBtn" type="button">↗ share</button>
             <button class="btn" id="loveBtn" type="button">💖 send love (<span id="loveCount">128</span>)</button>
-            <span class="tiny">email: <span id="emailText">cyizzie@email.com</span></span>
+            <span class="tiny">email: <span id="emailText">cyizzie@email.com</span> • discord: <a href="https://discord.com/users/776022128092774410" target="_blank" rel="noreferrer" style="color:inherit; text-decoration:underline;">776022128092774410</a></span>
           </div>
         </div>
       </div>
@@ -3518,6 +3833,21 @@
         <div class="mini" id="social" style="grid-column: 1 / -1;">
           <b>social (icons)</b>
           <div class="iconGrid">
+            <a class="app" href="https://discord.com/users/776022128092774410" target="_blank" rel="noreferrer">
+              <div class="appLeft">
+                <div class="icon" style="background: linear-gradient(135deg, rgba(88, 101, 242, .25), rgba(255, 117, 151, .2)); border-color: rgba(88, 101, 242, .35);">
+                  <svg class="ico" viewBox="0 0 24 24" fill="none">
+                    <path d="M19.3 5.3C17.9 4.6 16.4 4.1 14.8 3.9c-.2.4-.4.9-.6 1.3-1.8-.3-3.6-.3-5.3 0-.2-.4-.4-.9-.6-1.3-1.6.3-3.1.7-4.5 1.4C1 9.8.3 14.2.6 18.5c2 1.5 3.9 2.4 5.7 3 .5-.6.9-1.3 1.3-2.1-1.3-.5-2.1-1.3-2.1-1.3.1.1.2.1.3.2 3.7 2.4 8.7 2.4 12.4 0 .1-.1.2-.1.3-.2 0 0-.8.8-2.1 1.3.4.7.8 1.4 1.3 2.1 1.9-.6 3.8-1.5 5.7-3 .4-5-.7-9.4-2.7-13.2zM8.5 15.6c-1.1 0-2-.9-2-2.1s.9-2.1 2-2.1 2 .9 2 2.1-.9 2.1-2 2.1zm7 0c-1.1 0-2-.9-2-2.1s.9-2.1 2-2.1 2 .9 2 2.1-.9 2.1-2 2.1z" fill="white" opacity=".95"/>
+                  </svg>
+                </div>
+                <div style="min-width:0;">
+                  <div class="appName">Discord</div>
+                  <div class="appHint">cyizzie (776022128092774410)</div>
+                </div>
+              </div>
+              <div class="arrow">↗</div>
+            </a>
+
             <a class="app" href="https://www.roblox.com/Arccelia" target="_blank" rel="noreferrer">
               <div class="appLeft">
                 <div class="icon">
@@ -3596,12 +3926,12 @@
         <div class="mini" id="extras">
           <b>guest note</b>
           <p class="tiny" style="margin:0 0 8px;">(saved in browser)</p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <input id="noteInput"
-              style="flex:1; min-width:220px; padding:10px 12px; border-radius:14px; border:1px solid rgba(255,180,202,.18); background: rgba(255,255,255,.03); color: rgba(255,255,255,.90); outline:none;"
-              placeholder="leave a tiny note…" />
-            <button class="btn" id="saveNoteBtn" type="button">save</button>
-            <button class="btn" id="clearNoteBtn" type="button">clear</button>
+          <div class="guestNoteForm">
+            <input id="noteInput" placeholder="leave a tiny note…" />
+            <div class="guestNoteBtns">
+              <button class="btn" id="saveNoteBtn" type="button">save</button>
+              <button class="btn" id="clearNoteBtn" type="button">clear</button>
+            </div>
           </div>
           <div class="mini" style="margin-top:10px;">
             <b>saved</b>
@@ -3700,7 +4030,7 @@
       </div>
       <div class="npBtns">
         <button class="npBtn" id="npPlayBtn" type="button" aria-label="Play or Pause" title="Play / Pause">⏸</button>
-        <button class="npBtn" id="npNext" type="button" title="Next track">next</button>
+        <button class="npBtn" id="npNext" type="button" title="Next track">⏭</button>
         <button class="npBtn" id="npCollapse" type="button">–</button>
       </div>
     </div>
@@ -3710,9 +4040,11 @@
     // ===== EDIT THESE =====
     const EMAIL = "cyizzie@email.com";
     const USERNAME = "cyizzie";
+    const DISCORD_USER_ID = "776022128092774410";
+    const DISCORD_PROFILE_URL = `https://discord.com/users/${DISCORD_USER_ID}`;
 
     // ganti kalau mau:
-    const DISCORD_INVITE = "https://discord.gg/";
+    const DISCORD_INVITE = DISCORD_PROFILE_URL;
     const WEBSITE_URL = "https://cyizzievielle.github.io/cyizzie-portofolio/index.html";
     // ======================
 
@@ -3774,7 +4106,7 @@
         label: "strawberry matcha 🍓🍵",
         shortName: "strawberry matcha",
         mobileIcon: "🍓🍵",
-        pillText: "strawberry matcha",
+        pillText: "calm nights • matcha",
         toast: "theme: strawberry matcha 🍓🍵",
         accent: "#ff7597"
       },
@@ -3782,7 +4114,7 @@
         label: "midnight monochrome 📼🖤",
         shortName: "CAS monochrome",
         mobileIcon: "📼🖤",
-        pillText: "midnight monochrome",
+        pillText: "calm nights • noir",
         toast: "theme: CAS noir monochrome 📼🖤",
         accent: "#ffffff"
       },
@@ -3790,7 +4122,7 @@
         label: "rainy city 🌧️🏙️",
         shortName: "rainy city",
         mobileIcon: "🌧️🏙️",
-        pillText: "rainy city",
+        pillText: "calm nights • rain",
         toast: "theme: rainy city 🌧️🏙️",
         accent: "#38bdf8"
       },
@@ -3798,7 +4130,7 @@
         label: "pixel mode 👾",
         shortName: "pixel mode",
         mobileIcon: "👾",
-        pillText: "pixel mode",
+        pillText: "calm nights • 8-bit",
         toast: "theme: pixel mode 👾🕹️",
         accent: "#00f5ff"
       },
@@ -3806,7 +4138,7 @@
         label: "kidcore 🧸🌈",
         shortName: "kidcore",
         mobileIcon: "🧸🌈",
-        pillText: "kidcore",
+        pillText: "calm nights • retro",
         toast: "theme: kidcore 🧸🌈",
         accent: "#ffd166"
       }
@@ -4086,7 +4418,7 @@
       tracklistGrid.innerHTML = trackList.map((t, idx) => `
         <div class="trackItem ${idx === currentTrackIdx ? 'active' : ''}" data-idx="${idx}">
           <div class="trackThumb">
-            <img src="${t.cover}" alt="${t.title}" loading="lazy" />
+            <img src="${t.cover}" alt="${t.title}" loading="lazy" onerror="this.onerror=null; this.src='pp.jpg';" />
           </div>
           <div class="trackMeta">
             <div class="trackItemTitle">${t.title}</div>
