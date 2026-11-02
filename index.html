@@ -1524,19 +1524,25 @@
     }
 
     .mBtn {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       border-radius: 999px;
       border: 1px solid rgba(255, 180, 202, .18);
       background: rgba(255, 255, 255, .04);
       color: rgba(255, 255, 255, .90);
       cursor: pointer;
       font-weight: 900;
-      font-size: 16px;
-      display: grid;
-      place-items: center;
+      font-size: 17px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      white-space: nowrap;
+      overflow: hidden;
       transition: .16s ease;
       user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
     }
 
     .mBtn:hover {
@@ -1866,14 +1872,22 @@
 
     .profile {
       display: flex;
-      gap: 14px;
+      gap: 18px;
       align-items: center;
+      width: 100%;
+    }
+
+    .profileBody {
+      flex: 1;
+      min-width: 0;
+      width: 100%;
     }
 
     @media (max-width: 620px) {
       .profile {
         flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
       }
     }
 
@@ -1961,31 +1975,41 @@
       }
     }
 
-    /* buttons */
+    /* buttons — full width balanced grid */
     .actions {
-      margin-top: 12px;
-      display: flex;
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .btn {
       position: relative;
-      padding: 10px 12px;
+      padding: 10px 14px;
       border-radius: 14px;
       border: 1px solid rgba(255, 255, 255, .12);
       background: rgba(255, 255, 255, .03);
       color: var(--text);
       font-weight: 900;
+      font-size: 12.5px;
       cursor: pointer;
       transition: .16s ease;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       overflow: hidden;
       user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      touch-action: manipulation;
+      box-sizing: border-box;
+      width: 100%;
+      text-align: center;
+      white-space: nowrap;
     }
 
     .btn:hover {
@@ -2011,9 +2035,28 @@
       transform: translateY(0px) scale(.98);
     }
 
-    .tiny {
+    .actions #loveBtn {
+      grid-column: 1 / -1;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      padding: 11px 16px;
+      font-weight: 800;
+      font-size: 13px;
+      box-sizing: border-box;
+      touch-action: manipulation !important;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    .actions .tiny {
+      grid-column: 1 / -1;
+      text-align: center;
+      width: 100%;
       font-size: 12px;
       color: var(--muted);
+      margin-top: 3px;
     }
 
     /* content grid */
@@ -3257,6 +3300,7 @@
         align-items: flex-start;
         gap: 12px;
         margin-top: 4px;
+        width: 100%;
       }
 
       .pp {
@@ -3294,13 +3338,14 @@
         text-overflow: ellipsis;
       }
 
-      /* Modern balanced button grid on smartphone */
+      /* Modern balanced button grid on smartphone — spans 100% full width */
       .actions {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 7px;
+        gap: 8px;
         margin-top: 12px;
         width: 100%;
+        box-sizing: border-box;
       }
 
       .actions .btn {
@@ -3311,13 +3356,17 @@
         border-radius: 12px;
         text-align: center;
         box-sizing: border-box;
+        touch-action: manipulation;
       }
 
       .actions #loveBtn {
         grid-column: 1 / -1;
-        /* full width highlight action */
-        padding: 9px 12px;
+        width: 100%;
+        justify-content: center;
+        padding: 10px 12px;
         font-weight: 800;
+        box-sizing: border-box;
+        touch-action: manipulation !important;
       }
 
       .actions .tiny {
@@ -3326,6 +3375,7 @@
         font-size: 11px;
         margin-top: 3px;
         opacity: .75;
+        width: 100%;
       }
 
       .content {
@@ -3722,9 +3772,9 @@
       }
 
       .mBtn {
-        width: 33px;
-        height: 33px;
-        font-size: 13px;
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
       }
 
       .hero-title {
@@ -3777,7 +3827,7 @@
       <!-- MOBILE ACTIONS -->
       <div class="mActions" aria-label="Mobile actions">
         <button class="mBtn" id="mSoundBtn" type="button" aria-label="Toggle sound">🔊</button>
-        <button class="mBtn" id="mMoodBtn" type="button" aria-label="Toggle theme">🍓🍵</button>
+        <button class="mBtn" id="mMoodBtn" type="button" aria-label="Toggle theme">🍓</button>
         <!-- pixel theme indicator dot -->
         <span id="pixelModeDot"
           style="display:none; width:8px; height:8px; background:#00f5ff; box-shadow:0 0 8px #00f5ff; flex:0 0 auto; image-rendering:pixelated;"></span>
@@ -3905,7 +3955,7 @@
           <img src="pp.jpg" alt="Foto profil cyizzie" />
         </div>
 
-        <div style="min-width:0;">
+        <div class="profileBody">
           <h1 class="hero-title">hi, i’m <span class="grad">cyizzie</span> <span style="opacity:.85;">⟡</span></h1>
           <p class="sub">
             calm nights • minimal noise.<br />
@@ -4312,7 +4362,8 @@
       "strawberry-matcha": {
         label: "strawberry matcha 🍓🍵",
         shortName: "strawberry matcha",
-        mobileIcon: "🍓🍵",
+        mobileIcon: "🍓",
+        triggerIcon: "🍓🍵",
         pillText: "calm nights • matcha",
         toast: "theme: strawberry matcha 🍓🍵",
         accent: "#ff7597",
@@ -4332,7 +4383,8 @@
       "monochrome": {
         label: "midnight monochrome 📼🖤",
         shortName: "CAS monochrome",
-        mobileIcon: "📼🖤",
+        mobileIcon: "📼",
+        triggerIcon: "📼🖤",
         pillText: "calm nights • noir",
         toast: "theme: CAS noir monochrome 📼🖤",
         accent: "#ffffff",
@@ -4352,7 +4404,8 @@
       "rainy-city": {
         label: "rainy city 🌧️🏙️",
         shortName: "rainy city",
-        mobileIcon: "🌧️🏙️",
+        mobileIcon: "🌧️",
+        triggerIcon: "🌧️🏙️",
         pillText: "calm nights • rain",
         toast: "theme: rainy city 🌧️🏙️",
         accent: "#38bdf8",
@@ -4373,6 +4426,7 @@
         label: "pixel mode 👾",
         shortName: "pixel mode",
         mobileIcon: "👾",
+        triggerIcon: "👾🕹️",
         pillText: "calm nights • 8-bit",
         toast: "theme: pixel mode 👾🕹️",
         accent: "#00f5ff",
@@ -4392,7 +4446,8 @@
       "kidcore": {
         label: "kidcore 🧸🌈",
         shortName: "kidcore",
-        mobileIcon: "🧸🌈",
+        mobileIcon: "🧸",
+        triggerIcon: "🧸🌈",
         pillText: "calm nights • retro",
         toast: "theme: kidcore 🧸🌈",
         accent: "#ffd166",
@@ -4486,7 +4541,7 @@
 
       const info = themeMeta[theme];
       if (themeTriggerText) themeTriggerText.textContent = info.shortName;
-      if (themeTriggerIcon) themeTriggerIcon.textContent = info.mobileIcon;
+      if (themeTriggerIcon) themeTriggerIcon.textContent = info.triggerIcon || info.mobileIcon;
       if (themeTriggerDot) {
         themeTriggerDot.style.background = info.accent;
         themeTriggerDot.style.boxShadow = `0 0 10px ${info.accent}`;
@@ -5113,14 +5168,34 @@
     let loves = parseInt(localStorage.getItem("cy_loves") || "128", 10);
     loveCount.textContent = loves;
 
-    loveBtn?.addEventListener("click", (e) => {
+    function handleLoveReaction(x, y) {
       loves++;
       localStorage.setItem("cy_loves", String(loves));
       loveCount.textContent = loves;
       const rect = loveBtn.getBoundingClientRect();
-      spawnFloatingEmoji(rect.left + rect.width / 2, rect.top, ["💖", "🍓", "✨", "🌸"]);
+      const spawnX = typeof x === "number" ? x : (rect.left + rect.width / 2);
+      const spawnY = typeof y === "number" ? y : rect.top;
+      spawnFloatingEmoji(spawnX, spawnY, ["💖", "🍓", "✨", "🌸"]);
       playPop();
       showToast("love sent! 💖");
+    }
+
+    let lastLoveTouch = 0;
+    // Prevent iOS double-tap zoom gesture during rapid multi-clicking
+    loveBtn?.addEventListener("touchend", (e) => {
+      const now = Date.now();
+      if (now - lastLoveTouch < 450) {
+        e.preventDefault(); // Stop iOS double-tap to zoom
+        const touch = e.changedTouches ? e.changedTouches[0] : null;
+        handleLoveReaction(touch ? touch.clientX : null, touch ? touch.clientY : null);
+      }
+      lastLoveTouch = now;
+    }, { passive: false });
+
+    loveBtn?.addEventListener("click", (e) => {
+      // If touchend already handled this within 450ms, avoid double firing
+      if (Date.now() - lastLoveTouch < 450) return;
+      handleLoveReaction(e.clientX, e.clientY);
     });
 
     // ===== AMBIENT CANVAS PARTICLES (Strawberry petals & Matcha leaves) =====
