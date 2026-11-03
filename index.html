@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>cyizzie — userwholovecas</title>
   <meta name="description" content="cyizzie — calm nights, minimal noise, CAS vibe." />
-  <meta name="theme-color" content="#0e1511" />
+  <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -3849,7 +3849,7 @@
   </style>
 </head>
 
-<body class="theme-strawberry-matcha">
+<body class="theme-monochrome">
   <canvas id="ambientCanvas" aria-hidden="true"></canvas>
   <canvas id="fairyCanvas" aria-hidden="true"></canvas>
   <div class="progress" aria-hidden="true"></div>
@@ -3876,7 +3876,7 @@
       <!-- MOBILE ACTIONS -->
       <div class="mActions" aria-label="Mobile actions">
         <button class="mBtn" id="mSoundBtn" type="button" aria-label="Toggle sound">🔊</button>
-        <button class="mBtn" id="mMoodBtn" type="button" aria-label="Toggle theme">🍓</button>
+        <button class="mBtn" id="mMoodBtn" type="button" aria-label="Toggle theme">📼</button>
         <!-- pixel theme indicator dot -->
         <span id="pixelModeDot"
           style="display:none; width:8px; height:8px; background:#00f5ff; box-shadow:0 0 8px #00f5ff; flex:0 0 auto; image-rendering:pixelated;"></span>
@@ -3925,15 +3925,15 @@
     <!-- HERO -->
     <section class="card hero" id="top">
       <div class="topline" style="position:relative; z-index:100;">
-        <div class="pill"><span class="live"></span> calm nights • matcha</div>
+        <div class="pill"><span class="live"></span> calm nights • noir</div>
 
         <!-- GEN-Z AESTHETIC THEME PICKER DROPDOWN -->
         <div class="themePicker" id="themePicker">
           <button class="themeTrigger moodBtn" id="moodBtn" type="button" aria-haspopup="true" aria-expanded="false"
             title="Switch aesthetic vibe">
-            <span class="themeTriggerDot" id="themeTriggerDot"></span>
-            <span class="themeTriggerText" id="themeTriggerText">strawberry matcha</span>
-            <span class="themeTriggerIcon" id="themeTriggerIcon">🍓🍵</span>
+            <span class="themeTriggerDot" id="themeTriggerDot" style="background:#ffffff; box-shadow:0 0 10px #ffffff;"></span>
+            <span class="themeTriggerText" id="themeTriggerText">CAS monochrome</span>
+            <span class="themeTriggerIcon" id="themeTriggerIcon">📼🖤</span>
             <svg class="themeChevron" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 6l4 4 4-4" />
@@ -3947,7 +3947,7 @@
               <span class="themeMenuHint">tap to switch</span>
             </div>
 
-            <div class="themeOption active" data-theme="strawberry-matcha" role="menuitem" tabindex="0">
+            <div class="themeOption" data-theme="strawberry-matcha" role="menuitem" tabindex="0">
               <span class="themeSwatch swatch-strawberry"></span>
               <div class="themeMetaText">
                 <span class="themeName">Strawberry Matcha</span>
@@ -3956,7 +3956,7 @@
               <span class="themeCheck">✓</span>
             </div>
 
-            <div class="themeOption" data-theme="monochrome" role="menuitem" tabindex="0">
+            <div class="themeOption active" data-theme="monochrome" role="menuitem" tabindex="0">
               <span class="themeSwatch swatch-monochrome"></span>
               <div class="themeMetaText">
                 <span class="themeName">Midnight Monochrome</span>
@@ -4068,20 +4068,20 @@
         <!-- INTERACTIVE AESTHETIC SIP LAB -->
         <div class="mini" id="sipLab">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-            <b id="sipLabTitle" style="margin:0;">sip lab 🍓🍵</b>
+            <b id="sipLabTitle" style="margin:0;">midnight brew 📼☕</b>
             <button class="btn" id="sipBtn" type="button"
-              style="padding:4px 10px; font-size:11px; border-radius:999px;">🥤 take a sip</button>
+              style="padding:4px 10px; font-size:11px; border-radius:999px;">☕ take a sip</button>
           </div>
           <div class="sipWidget">
-            <div class="sipPreviewCup" id="sipCup">strawberry matcha mix</div>
+            <div class="sipPreviewCup" id="sipCup">noir espresso latte</div>
             <div class="sipSliders">
               <div class="sipRow">
-                <span id="slider1Label">🍓 Sweetness</span>
+                <span id="slider1Label">☕ Espresso Roast</span>
                 <input type="range" id="strawSlider" min="15" max="85" value="50" />
                 <span id="strawVal">50%</span>
               </div>
               <div class="sipRow">
-                <span id="slider2Label">🍵 Matcha</span>
+                <span id="slider2Label">🥛 Steamed Milk</span>
                 <input type="range" id="matchaSlider" min="15" max="85" value="50" />
                 <span id="matchaVal">50%</span>
               </div>
@@ -4532,7 +4532,7 @@
       }
     };
 
-    let activeThemeKey = "strawberry-matcha";
+    let activeThemeKey = "monochrome";
 
     // Sip Lab Elements
     const strawSlider = document.getElementById("strawSlider");
@@ -4553,7 +4553,7 @@
       if (matchaVal) matchaVal.textContent = `${m}%`;
       sipCup.style.setProperty("--straw-pct", `${s}%`);
 
-      const info = themeMeta[activeThemeKey] || themeMeta["strawberry-matcha"];
+      const info = themeMeta[activeThemeKey] || themeMeta["monochrome"];
       if (info && info.sip) {
         sipCup.style.background = `linear-gradient(90deg, ${info.sip.color1} ${s}%, ${info.sip.color2} ${s}%)`;
         const glow1 = (s / 100 * 0.38).toFixed(2);
@@ -4564,7 +4564,7 @@
     }
 
     function updateSipLabTheme(theme) {
-      const info = themeMeta[theme] || themeMeta["strawberry-matcha"];
+      const info = themeMeta[theme] || themeMeta["monochrome"];
       if (!info || !info.sip) return;
       if (sipLabTitle) sipLabTitle.textContent = info.sip.title;
       if (sipCup) {
@@ -4586,15 +4586,15 @@
       sipCup.classList.add("sipped");
       setTimeout(() => sipCup.classList.remove("sipped"), 300);
       const rect = sipBtn.getBoundingClientRect();
-      const info = themeMeta[activeThemeKey] || themeMeta["strawberry-matcha"];
-      const emojis = info?.sip?.emojis || ["🥤", "🍓", "🍵", "✨", "🫧"];
+      const info = themeMeta[activeThemeKey] || themeMeta["monochrome"];
+      const emojis = info?.sip?.emojis || ["☕", "📼", "🖤", "✨", "☁️"];
       spawnFloatingEmoji(rect.left + rect.width / 2, rect.top, emojis);
       playChord();
-      showToast(info?.sip?.toast || "delicious sip! 🥤✨");
+      showToast(info?.sip?.toast || "warm midnight coffee sip... ☕🖤");
     });
 
     function setTheme(theme) {
-      if (!themeMeta[theme]) theme = "strawberry-matcha";
+      if (!themeMeta[theme]) theme = "monochrome";
       activeThemeKey = theme;
       document.body.classList.remove(
         "theme-strawberry-matcha", "theme-monochrome", "theme-rainy-city",
@@ -4641,7 +4641,7 @@
 
     let savedTheme = localStorage.getItem("cy_theme");
     if (!savedTheme || !themeMeta[savedTheme]) {
-      savedTheme = "strawberry-matcha";
+      savedTheme = "monochrome";
     }
     setTheme(savedTheme);
 
