@@ -111,10 +111,26 @@ npx serve .
 
 ```bash
 cyizziecard-v2/
-├── index.html       # Complete application (Layout, Responsive CSS & Logic)
-├── pp.jpg           # Profile avatar
-├── pp2.jpg          # Secondary avatar asset
-└── README.md        # Documentation
+├── .github/
+│   └── workflows/
+│       └── static.yml       # GitHub Pages automated deployment
+├── assets/
+│   ├── audio/              # Cigarettes After Sex ambient MP3 tracks
+│   │   ├── apocalypse.mp3
+│   │   ├── each_time_you_fall_in_love.mp3
+│   │   ├── heavenly.mp3
+│   │   ├── k.mp3
+│   │   ├── keep_on_loving_you.mp3
+│   │   ├── music.mp3
+│   │   ├── sunsetz.mp3
+│   │   ├── sweet.mp3
+│   │   └── touch.mp3
+│   └── images/             # Profile avatars and visual assets
+│       ├── 64062b97f9425c685baeab89ed2e4ffe.jpg
+│       ├── pp.jpg
+│       └── pp2.jpg
+├── index.html              # Core application (Semantic HTML, Noir CSS & Engine)
+└── README.md               # Documentation
 ```
 
 ---

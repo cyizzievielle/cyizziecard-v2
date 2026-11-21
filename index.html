@@ -5171,7 +5171,7 @@
           <div class="mBrandCard">
             <div class="mBrandRow">
               <div class="mAvatar" aria-hidden="true">
-                <img src="pp.jpg" alt="" />
+                <img src="assets/images/pp.jpg" alt="" />
               </div>
               <div class="mBrandText">
                 <div class="mTitle">cyizzie</div>
@@ -5276,8 +5276,8 @@
         PIXEL.MODE</div>
 
       <div class="profile">
-        <div class="pp" title="taruh pp.jpg di folder yang sama">
-          <img src="pp.jpg" alt="Foto profil cyizzie" />
+        <div class="pp" title="taruh pp.jpg di folder assets/images/">
+          <img src="assets/images/pp.jpg" alt="Foto profil cyizzie" />
         </div>
 
         <div class="profileBody">
@@ -6357,7 +6357,7 @@
         year: "2015",
         cover: "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023c7b93e728351de613fe816b",
         spotifyId: "5VYBergVrUDcb8QyEg70cF",
-        audio: "keep_on_loving_you.mp3"
+        audio: "assets/audio/keep_on_loving_you.mp3"
       },
       {
         title: "Apocalypse",
@@ -6366,7 +6366,7 @@
         year: "2017",
         cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026b701428ed4c6e053902174a",
         spotifyId: "0yc6Gst2xkRu0eMLeRMGCX",
-        audio: "apocalypse.mp3"
+        audio: "assets/audio/apocalypse.mp3"
       },
       {
         title: "Touch",
@@ -6375,7 +6375,7 @@
         year: "2019",
         cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e028324db1ae37be249aed887e7",
         spotifyId: "1v7ptGUBS2DbbRmfIG0hU2",
-        audio: "touch.mp3"
+        audio: "assets/audio/touch.mp3"
       },
       {
         title: "K.",
@@ -6384,7 +6384,7 @@
         year: "2017",
         cover: "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02dfed999f959177dfc4f33cdc",
         spotifyId: "2xGjfbXZnI8uQDhukoQURQ",
-        audio: "k.mp3"
+        audio: "assets/audio/k.mp3"
       },
       {
         title: "Sunsetz",
@@ -6393,7 +6393,7 @@
         year: "2017",
         cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026b701428ed4c6e053902174a",
         spotifyId: "1OJhOioMqidSWYx0O30hBS",
-        audio: "sunsetz.mp3"
+        audio: "assets/audio/sunsetz.mp3"
       },
       {
         title: "Sweet",
@@ -6402,7 +6402,7 @@
         year: "2017",
         cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026b701428ed4c6e053902174a",
         spotifyId: "4VxgNjIxoyvvYDqBVyP53n",
-        audio: "sweet.mp3"
+        audio: "assets/audio/sweet.mp3"
       },
       {
         title: "Each Time You Fall In Love",
@@ -6411,7 +6411,7 @@
         year: "2017",
         cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026b701428ed4c6e053902174a",
         spotifyId: "6YbqjyoqQx9p13IndkOzeP",
-        audio: "each_time_you_fall_in_love.mp3"
+        audio: "assets/audio/each_time_you_fall_in_love.mp3"
       },
       {
         title: "Heavenly",
@@ -6420,7 +6420,7 @@
         year: "2019",
         cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e028324db1ae37be249aed887e7",
         spotifyId: "1HxY20WxyNEiuJPC9M0Iis",
-        audio: "heavenly.mp3"
+        audio: "assets/audio/heavenly.mp3"
       }
     ];
 
@@ -6448,7 +6448,7 @@
     let currentTrackIdx = parseInt(localStorage.getItem("cy_track") || "0", 10) || 0;
 
     if (bgAudio && trackList[currentTrackIdx]) {
-      bgAudio.src = trackList[currentTrackIdx].audio || "music.mp3";
+      bgAudio.src = trackList[currentTrackIdx].audio || "assets/audio/music.mp3";
     }
 
     function renderTracklist() {
@@ -6456,7 +6456,7 @@
       tracklistGrid.innerHTML = trackList.map((t, idx) => `
         <div class="trackItem ${idx === currentTrackIdx ? 'active' : ''}" data-idx="${idx}">
           <div class="trackThumb">
-            <img src="${t.cover}" alt="${t.title}" loading="lazy" onerror="this.onerror=null; this.src='pp.jpg';" />
+            <img src="${t.cover}" alt="${t.title}" loading="lazy" onerror="this.onerror=null; this.src='assets/images/pp.jpg';" />
           </div>
           <div class="trackMeta">
             <div class="trackItemTitle">${t.title}</div>
@@ -6532,7 +6532,7 @@
     function playAudioTrack(showNotice = true) {
       if (!bgAudio) return;
       const t = trackList[currentTrackIdx];
-      const targetAudio = t.audio || `${t.title.toLowerCase().replace(/[^a-z0-9]/g, "_")}.mp3`;
+      const targetAudio = t.audio || `assets/audio/${t.title.toLowerCase().replace(/[^a-z0-9]/g, "_")}.mp3`;
 
       if (!bgAudio.src || !bgAudio.src.endsWith(targetAudio)) {
         bgAudio.src = targetAudio;
@@ -6544,8 +6544,8 @@
           if (showNotice) showToast(`playing: ${t.title} ♫`);
         }).catch((err) => {
           console.warn("Primary audio failed, fallback to music.mp3:", err);
-          if (!bgAudio.src.endsWith("music.mp3")) {
-            bgAudio.src = "music.mp3";
+          if (!bgAudio.src.endsWith("assets/audio/music.mp3")) {
+            bgAudio.src = "assets/audio/music.mp3";
             bgAudio.play().then(() => {
               if (showNotice) showToast(`playing: ${t.title} ♫`);
             }).catch(() => {
