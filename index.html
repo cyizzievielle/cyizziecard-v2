@@ -1239,492 +1239,408 @@
       box-shadow: 4px 4px 0 #2d2638 !important;
     }
 
-    /* 5. Pixel Theme (retro neon 8-bit) */
+    /* 5. Pixel Theme (Lofi Retro 8-Bit Cyber-Night — Soft, Aesthetic, & Easy on the Eyes) */
     body.theme-pixel {
-      --grad-main: linear-gradient(90deg, #00f5ff 0%, #ff00aa 40%, #aaff00 75%, #00f5ff 100%);
-      --glow-1: rgba(0, 245, 255, .22);
-      --glow-2: rgba(255, 0, 170, .22);
-      --glow-3: rgba(170, 255, 0, .18);
-      --bg0: #05000d;
-      --bg1: #080018;
-      --bg2: #0d0005;
-      --card: rgba(0, 245, 255, .04);
-      --line: rgba(0, 245, 255, .18);
-      --pixel-cyan: #00f5ff;
-      --pixel-magenta: #ff00aa;
-      --pixel-lime: #aaff00;
-      --pixel-yellow: #ffee00;
-      --accent: #00f5ff;
+      --grad-main: linear-gradient(135deg, #7dd3fc 0%, #c084fc 50%, #6ee7b7 100%);
+      --glow-1: rgba(125, 211, 252, .18);
+      --glow-2: rgba(192, 132, 252, .15);
+      --glow-3: rgba(110, 231, 183, .12);
+      --bg0: #0a0e17;
+      --bg1: #0f1422;
+      --bg2: #141b2d;
+      --card: rgba(15, 20, 34, .75);
+      --line: rgba(125, 211, 252, .18);
+      --pixel-cyan: #38bdf8;
+      --pixel-soft-cyan: #7dd3fc;
+      --pixel-lavender: #c084fc;
+      --pixel-mint: #6ee7b7;
+      --pixel-border: rgba(125, 211, 252, .24);
+      --accent: #38bdf8;
     }
 
-    /* Pixel body font override — Press Start 2P is wide, scale down sizes */
+    /* Pixel typography: Keep clean readable system font for body & long texts, use Press Start 2P exclusively for retro headings & tags */
     body.theme-pixel {
-      font-family: 'Press Start 2P', ui-monospace, monospace !important;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     }
 
-    body.theme-pixel * {
-      font-family: 'Press Start 2P', ui-monospace, monospace !important;
-    }
-
-    /* Scale down font sizes for pixel — bitmap font renders ~1.4x wider */
-    body.theme-pixel .mini p,
-    body.theme-pixel .mini .list,
-    body.theme-pixel .sub {
-      font-size: 9px !important;
-      line-height: 2 !important;
-    }
-
-    body.theme-pixel .mini b,
-    body.theme-pixel .appName {
-      font-size: 9px !important;
-    }
-
-    body.theme-pixel .appHint,
-    body.theme-pixel .tiny,
-    body.theme-pixel .pill,
-    body.theme-pixel .status,
-    body.theme-pixel .trackItemTitle {
-      font-size: 8px !important;
-      line-height: 1.9 !important;
-    }
-
-    body.theme-pixel .trackItemAlbum,
-    body.theme-pixel .npTitle,
-    body.theme-pixel .npSub {
-      font-size: 7px !important;
-      line-height: 1.9 !important;
-    }
-
-    body.theme-pixel .brandText {
-      font-size: 10px !important;
-    }
-
-    body.theme-pixel .brandText small {
-      font-size: 7px !important;
+    body.theme-pixel h1,
+    body.theme-pixel h2,
+    body.theme-pixel .hero-title,
+    body.theme-pixel .brandText small,
+    body.theme-pixel .topline .pill,
+    body.theme-pixel .microBadge,
+    body.theme-pixel #pixelWatermark {
+      font-family: 'Press Start 2P', monospace, sans-serif !important;
     }
 
     body.theme-pixel .hero-title {
-      font-size: 22px !important;
-      line-height: 1.5 !important;
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      letter-spacing: .02em !important;
     }
 
-    body.theme-pixel .btn {
-      font-size: 9px !important;
+    @media (max-width: 520px) {
+      body.theme-pixel .hero-title {
+        font-size: 13px !important;
+      }
     }
 
-    body.theme-pixel .moodBtn {
+    body.theme-pixel .brandText small {
       font-size: 8px !important;
+      letter-spacing: .08em;
     }
 
-    body.theme-pixel nav.navDesk a {
+    body.theme-pixel .topline .pill,
+    body.theme-pixel .microBadge {
       font-size: 8px !important;
+      letter-spacing: .04em;
     }
 
-    body.theme-pixel .mItem {
-      font-size: 9px !important;
-    }
-
-    body.theme-pixel .jarQuote,
-    body.theme-pixel .lyricContent p {
-      font-size: 9px !important;
-      line-height: 2 !important;
-    }
-
-    body.theme-pixel .jarMeta span,
-    body.theme-pixel .lyricMeta span {
-      font-size: 7px !important;
-    }
-
-    body.theme-pixel .sipRow {
-      font-size: 8px !important;
-    }
-
-    body.theme-pixel .sipPreviewCup {
-      font-size: 8px !important;
-    }
-
-    /* Pixel scanline + grid overlay */
+    /* Soft retro ambient grid (gentle on eyes, no screen vibration or flickering) */
     body.theme-pixel::before {
       background:
-        linear-gradient(rgba(0, 245, 255, .08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 0, 170, .06) 1px, transparent 1px),
-        repeating-linear-gradient(180deg, rgba(0, 0, 0, .18), rgba(0, 0, 0, .18) 1px, transparent 2px, transparent 4px);
-      background-size: 8px 8px, 8px 8px, 100% 4px;
-      opacity: .7;
-      mix-blend-mode: normal;
+        linear-gradient(rgba(125, 211, 252, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(192, 132, 252, .035) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: .65;
+      mix-blend-mode: screen;
     }
 
-    /* Pixel border — dashed chunky feel */
+    /* Clean retro card: soft 8px corners, calm cyber border */
     body.theme-pixel .card {
-      border: 2px solid var(--pixel-cyan);
-      border-radius: 0;
-      box-shadow: 4px 4px 0 var(--pixel-magenta), 8px 8px 0 rgba(0, 245, 255, .15);
-      image-rendering: pixelated;
+      border: 1.5px solid var(--pixel-border);
+      border-radius: 8px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .05);
+      background: rgba(14, 19, 32, .88);
+      backdrop-filter: blur(14px);
     }
 
     body.theme-pixel .card::after {
-      border-radius: 0;
+      border-radius: 8px;
       background:
-        radial-gradient(600px 240px at 18% 12%, rgba(0, 245, 255, .18), transparent 55%),
-        radial-gradient(600px 240px at 85% 20%, rgba(255, 0, 170, .20), transparent 60%);
+        radial-gradient(500px 200px at 15% 10%, rgba(125, 211, 252, .10), transparent 60%),
+        radial-gradient(500px 200px at 85% 20%, rgba(192, 132, 252, .08), transparent 60%);
     }
 
     body.theme-pixel .mini {
-      border: 1px solid rgba(0, 245, 255, .28);
-      border-radius: 0;
-      box-shadow: 2px 2px 0 rgba(255, 0, 170, .35);
+      border: 1px solid rgba(125, 211, 252, .16);
+      border-radius: 6px;
+      background: rgba(18, 24, 40, .6);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .03);
     }
 
     body.theme-pixel .mini:hover {
-      border-color: var(--pixel-cyan);
-      box-shadow: 3px 3px 0 var(--pixel-magenta);
+      border-color: rgba(125, 211, 252, .36);
+      box-shadow: 0 4px 16px rgba(125, 211, 252, .08);
     }
 
     body.theme-pixel .app {
-      border-radius: 0;
-      border: 1px solid rgba(0, 245, 255, .22);
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .14);
+      background: rgba(18, 24, 40, .45);
     }
 
     body.theme-pixel .app:hover {
-      border-color: var(--pixel-cyan);
-      box-shadow: 2px 2px 0 var(--pixel-magenta);
+      border-color: rgba(125, 211, 252, .38);
+      background: rgba(125, 211, 252, .06);
+      box-shadow: 0 4px 14px rgba(125, 211, 252, .1);
     }
 
     body.theme-pixel .musicTip {
-      font-family: 'Press Start 2P', monospace !important;
-      font-size: 7px !important;
-      letter-spacing: .04em !important;
+      font-size: 11px !important;
+      letter-spacing: .02em !important;
+      color: rgba(125, 211, 252, .8) !important;
     }
 
     body.theme-pixel .tag {
-      border-radius: 0 !important;
-      font-family: 'Press Start 2P', monospace !important;
-      font-size: 7.5px !important;
-      border-color: rgba(0, 245, 255, .25) !important;
+      border-radius: 4px !important;
+      font-size: 11.5px !important;
+      border-color: rgba(125, 211, 252, .2) !important;
+      background: rgba(125, 211, 252, .05) !important;
+      color: rgba(255, 255, 255, .88) !important;
+    }
+
+    body.theme-pixel .tag:hover {
+      border-color: rgba(125, 211, 252, .45) !important;
+      background: rgba(125, 211, 252, .12) !important;
     }
 
     body.theme-pixel .btn {
-      border-radius: 0;
-      border: 2px solid rgba(0, 245, 255, .35);
-      image-rendering: pixelated;
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .26);
+      background: rgba(18, 24, 40, .75);
+      transition: all .2s cubic-bezier(.16, 1, .3, 1);
     }
 
     body.theme-pixel .btn:hover {
-      border-color: var(--pixel-cyan);
-      box-shadow: 2px 2px 0 var(--pixel-magenta);
-      transform: translate(-2px, -2px);
+      border-color: var(--pixel-soft-cyan);
+      background: rgba(125, 211, 252, .12);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(125, 211, 252, .15);
     }
 
     body.theme-pixel .btn:active {
-      transform: translate(0, 0) !important;
+      transform: translateY(0) !important;
       box-shadow: none !important;
     }
 
     body.theme-pixel .btn.primary {
-      border-color: var(--pixel-cyan);
-      background: rgba(0, 245, 255, .12);
-      box-shadow: 2px 2px 0 var(--pixel-magenta);
+      border-color: var(--pixel-soft-cyan);
+      background: linear-gradient(135deg, rgba(56, 189, 248, .2), rgba(192, 132, 252, .16));
+      color: #ffffff;
+      box-shadow: 0 2px 10px rgba(56, 189, 248, .2);
     }
 
     body.theme-pixel .btn.primary:hover {
-      background: rgba(0, 245, 255, .22);
-      box-shadow: 3px 3px 0 var(--pixel-magenta);
+      background: linear-gradient(135deg, rgba(56, 189, 248, .32), rgba(192, 132, 252, .25));
+      box-shadow: 0 4px 16px rgba(56, 189, 248, .35);
     }
 
     body.theme-pixel header {
-      border-radius: 0;
-      border: 2px solid rgba(0, 245, 255, .28);
-      box-shadow: 3px 3px 0 rgba(255, 0, 170, .35);
+      border-radius: 8px;
+      border: 1px solid rgba(125, 211, 252, .2);
+      background: rgba(14, 19, 32, .8);
     }
 
     body.theme-pixel .pill {
-      border-radius: 0;
-      border: 1px solid rgba(0, 245, 255, .35);
+      border-radius: 4px;
+      border: 1px solid rgba(125, 211, 252, .25);
+      background: rgba(125, 211, 252, .06);
     }
 
     body.theme-pixel .pp {
-      border-radius: 4px;
-      border: 2px solid var(--pixel-cyan);
-      box-shadow: 3px 3px 0 var(--pixel-magenta);
-      image-rendering: pixelated;
+      border-radius: 8px;
+      border: 2px solid var(--pixel-soft-cyan);
+      box-shadow: 0 4px 20px rgba(56, 189, 248, .25);
     }
 
     body.theme-pixel .pp:hover {
-      box-shadow: 4px 4px 0 var(--pixel-magenta), 0 0 18px rgba(0, 245, 255, .5);
-      transform: translate(-2px, -2px) scale(1.03);
+      border-color: #ffffff;
+      box-shadow: 0 6px 24px rgba(56, 189, 248, .4);
+      transform: scale(1.02);
     }
 
     body.theme-pixel .icon {
-      border-radius: 0;
-      border: 1px solid rgba(0, 245, 255, .35);
-      background: rgba(0, 245, 255, .08);
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .25);
+      background: rgba(125, 211, 252, .08);
     }
 
     body.theme-pixel .dot {
       border-radius: 2px;
-      background: var(--pixel-cyan);
-      box-shadow: 0 0 0 4px rgba(0, 245, 255, .18), 0 0 10px var(--pixel-cyan);
-      animation: pixelBlink 1s step-start infinite;
-    }
-
-    @keyframes pixelBlink {
-
-      0%,
-      49% {
-        opacity: 1;
-      }
-
-      50%,
-      100% {
-        opacity: 0;
-      }
+      background: var(--pixel-mint);
+      box-shadow: 0 0 0 3px rgba(110, 231, 183, .2), 0 0 8px var(--pixel-mint);
     }
 
     body.theme-pixel .cursor {
-      background: var(--pixel-cyan);
-      border-radius: 0;
-      box-shadow: 0 0 8px var(--pixel-cyan);
-      width: 10px;
-      height: 14px;
+      background: var(--pixel-soft-cyan);
+      border-radius: 2px;
+      box-shadow: 0 0 8px rgba(125, 211, 252, .5);
+      width: 8px;
+      height: 12px;
     }
 
     body.theme-pixel .progress {
-      background: linear-gradient(90deg, #00f5ff, #ff00aa, #aaff00, #00f5ff);
-      box-shadow: 0 0 10px #00f5ff;
+      background: linear-gradient(90deg, #38bdf8, #c084fc, #6ee7b7);
+      box-shadow: 0 0 8px rgba(56, 189, 248, .4);
     }
 
     body.theme-pixel .disc {
       border-radius: 50%;
-      border: 2px solid var(--pixel-cyan);
-      box-shadow: 0 0 8px rgba(0, 245, 255, .4);
-      animation: spinDisc 9s steps(24) infinite;
+      border: 2px solid var(--pixel-soft-cyan);
+      box-shadow: 0 0 14px rgba(56, 189, 248, .3);
     }
 
     body.theme-pixel .nowInner {
-      border-radius: 0;
-      border: 2px solid rgba(0, 245, 255, .3);
-      box-shadow: 3px 3px 0 rgba(255, 0, 170, .35);
+      border-radius: 8px;
+      border: 1px solid rgba(125, 211, 252, .22);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+      background: rgba(14, 19, 32, .85);
     }
 
     body.theme-pixel .npBtn {
-      border-radius: 0;
+      border-radius: 6px;
     }
 
     body.theme-pixel .trackItem {
-      border-radius: 0;
-      border: 1px solid rgba(0, 245, 255, .18);
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .14);
+      background: rgba(18, 24, 40, .45);
     }
 
     body.theme-pixel .trackItem:hover {
-      border-color: var(--pixel-cyan);
-      box-shadow: 2px 2px 0 var(--pixel-magenta);
-      transform: translate(-2px, -2px);
+      border-color: rgba(125, 211, 252, .36);
+      background: rgba(125, 211, 252, .08);
+      transform: translateY(-1px);
     }
 
     body.theme-pixel .trackItem.active {
-      border-color: var(--pixel-cyan);
-      background: rgba(0, 245, 255, .10);
-      box-shadow: 2px 2px 0 var(--pixel-magenta);
+      border-color: var(--pixel-soft-cyan);
+      background: rgba(56, 189, 248, .12);
+      box-shadow: 0 2px 10px rgba(56, 189, 248, .2);
     }
 
     body.theme-pixel .trackThumb {
-      border-radius: 0;
-      image-rendering: pixelated;
+      border-radius: 4px;
     }
 
     body.theme-pixel .activeTrackCard {
-      border-radius: 0;
-      border: 2px solid rgba(0, 245, 255, .28);
-      background: linear-gradient(135deg, rgba(0, 245, 255, .08), rgba(255, 0, 170, .06));
-      box-shadow: 4px 4px 0 rgba(255, 0, 170, .3);
+      border-radius: 8px;
+      border: 1.5px solid rgba(125, 211, 252, .25);
+      background: linear-gradient(135deg, rgba(56, 189, 248, .08), rgba(192, 132, 252, .06));
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
     }
 
     body.theme-pixel .trackCoverBox img {
-      border-radius: 0;
-      border: 2px solid var(--pixel-cyan);
-      image-rendering: pixelated;
+      border-radius: 6px;
+      border: 1.5px solid rgba(125, 211, 252, .3);
     }
 
     body.theme-pixel .lyricCard {
-      border-radius: 0;
-      border: 1px dashed var(--pixel-cyan);
-      background: linear-gradient(135deg, rgba(0, 245, 255, .07), rgba(255, 0, 170, .05));
+      border-radius: 8px;
+      border: 1px solid rgba(125, 211, 252, .22);
+      background: linear-gradient(135deg, rgba(56, 189, 248, .06), rgba(192, 132, 252, .04));
     }
 
     body.theme-pixel .lyricThumb {
-      border-radius: 0;
-      border: 2px solid var(--pixel-cyan);
-      image-rendering: pixelated;
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .25);
     }
 
     body.theme-pixel .jarCardInner {
-      border-radius: 0;
-      border: 1px solid rgba(0, 245, 255, .25);
-      background: linear-gradient(135deg, rgba(0, 245, 255, .06), rgba(255, 0, 170, .04));
+      border-radius: 8px;
+      border: 1px solid rgba(125, 211, 252, .2);
+      background: rgba(18, 24, 40, .55);
     }
 
     body.theme-pixel .jarBottleBox {
-      border-radius: 0;
-      border: 1px solid rgba(0, 245, 255, .4);
-      background: radial-gradient(circle at 35% 35%, rgba(0, 245, 255, .2), rgba(5, 0, 13, .85));
-      box-shadow: 2px 2px 0 var(--pixel-magenta);
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .28);
+      background: radial-gradient(circle at 35% 35%, rgba(125, 211, 252, .18), rgba(10, 14, 23, .85));
     }
 
     body.theme-pixel .sipWidget {
-      border-radius: 0;
-      border: 1px solid rgba(0, 245, 255, .22);
+      border-radius: 8px;
+      border: 1px solid rgba(125, 211, 252, .2);
+      background: rgba(18, 24, 40, .5);
     }
 
     body.theme-pixel .sipPreviewCup {
-      border-radius: 0;
-      background: linear-gradient(90deg, #ff00aa var(--straw-pct, 50%), #55cc33 var(--straw-pct, 50%));
-      border: 1px solid var(--pixel-cyan);
-      color: #fff !important;
-      text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 0 5px rgba(0, 0, 0, .85);
-      box-shadow: 2px 2px 0 var(--pixel-magenta);
+      border-radius: 6px;
+      background: linear-gradient(90deg, #c084fc var(--straw-pct, 50%), #34d399 var(--straw-pct, 50%));
+      border: 1px solid rgba(125, 211, 252, .3);
+      color: #ffffff !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
     }
 
     body.theme-pixel #strawSlider {
-      accent-color: #ff00aa;
+      accent-color: #c084fc;
     }
 
     body.theme-pixel #matchaSlider {
-      accent-color: #55cc33;
+      accent-color: #34d399;
     }
 
     body.theme-pixel .eqBar {
-      background: linear-gradient(180deg, var(--pixel-cyan), var(--pixel-magenta));
+      background: linear-gradient(180deg, var(--pixel-soft-cyan), var(--pixel-lavender));
     }
 
     body.theme-pixel .vinylPeek {
       border-radius: 50%;
-      background: radial-gradient(circle, #050005 28%, #1f0033 35%, #0e0022 70%, #1a0033 100%);
-      border: 1.5px solid var(--pixel-cyan);
-      box-shadow: 0 0 10px rgba(0, 245, 255, .3);
+      background: radial-gradient(circle, #080c14 28%, #141c2e 35%, #0d1220 70%, #162035 100%);
+      border: 1.5px solid var(--pixel-soft-cyan);
+      box-shadow: 0 0 12px rgba(56, 189, 248, .25);
     }
 
     body.theme-pixel .vinylPeek::after {
       border-radius: 50%;
-      background: var(--pixel-cyan);
+      background: var(--pixel-soft-cyan);
     }
 
     body.theme-pixel .mSheet {
       border-radius: 0;
-      border-left: 2px solid var(--pixel-cyan);
-      box-shadow: -4px 0 0 var(--pixel-magenta);
+      border-left: 1.5px solid rgba(125, 211, 252, .3);
+      box-shadow: -8px 0 32px rgba(0, 0, 0, .6);
+      background: #0d1220 !important;
     }
 
     body.theme-pixel .mItem {
-      border-radius: 0;
-      border: 1px solid rgba(0, 245, 255, .18);
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .14);
+      background: rgba(18, 24, 40, .4);
     }
 
     body.theme-pixel .mItem.active {
-      border-color: var(--pixel-cyan);
-      background: rgba(0, 245, 255, .10);
-    }
-
-    body.theme-pixel .mBtn {
-      border-radius: 0;
+      border-color: var(--pixel-soft-cyan);
+      background: rgba(56, 189, 248, .12);
     }
 
     body.theme-pixel .mCTA {
-      border-radius: 0;
-      border: 2px solid var(--pixel-cyan);
-      background: rgba(0, 245, 255, .12);
+      border-radius: 6px;
+      border: 1.5px solid var(--pixel-soft-cyan);
+      background: rgba(56, 189, 248, .14);
+      color: #ffffff;
     }
 
     body.theme-pixel .mBrandCard {
-      border-radius: 0;
-      border: 1px solid rgba(0, 245, 255, .2);
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .2);
+      background: rgba(18, 24, 40, .6);
     }
 
     body.theme-pixel .mAvatar img {
-      border-radius: 2px;
-      image-rendering: pixelated;
+      border-radius: 6px;
     }
 
     body.theme-pixel .mAvatar {
-      border-radius: 2px;
+      border-radius: 6px;
     }
 
     body.theme-pixel .mClose {
-      border-radius: 0 !important;
-      border: 2px solid var(--pixel-cyan) !important;
-      background: #000000 !important;
-      color: var(--pixel-cyan) !important;
+      border-radius: 6px !important;
+      border: 1px solid rgba(125, 211, 252, .3) !important;
+      background: rgba(18, 24, 40, .8) !important;
+      color: var(--pixel-soft-cyan) !important;
     }
 
     body.theme-pixel .mGlobe {
-      border-radius: 0 !important;
-      border: 2px solid var(--pixel-cyan) !important;
-      background: #000000 !important;
-      color: var(--pixel-cyan) !important;
+      border-radius: 6px !important;
+      border: 1px solid rgba(125, 211, 252, .3) !important;
+      background: rgba(18, 24, 40, .8) !important;
+      color: var(--pixel-soft-cyan) !important;
     }
 
     body.theme-pixel .mDivider {
-      background: var(--pixel-cyan) !important;
-      opacity: .3 !important;
+      background: rgba(125, 211, 252, .2) !important;
     }
 
     body.theme-pixel .mItem .mIco {
-      border-radius: 0 !important;
-      border: 1px solid var(--pixel-cyan) !important;
-      background: rgba(0, 245, 255, .10) !important;
-      color: var(--pixel-cyan) !important;
+      border-radius: 4px !important;
+      border: 1px solid rgba(125, 211, 252, .25) !important;
+      background: rgba(125, 211, 252, .08) !important;
+      color: var(--pixel-soft-cyan) !important;
     }
 
     body.theme-pixel .mItem.active .mIco {
-      background: var(--pixel-cyan) !important;
-      color: #000000 !important;
+      background: var(--pixel-soft-cyan) !important;
+      color: #0b0e17 !important;
     }
 
     body.theme-pixel .mBottom {
-      border-top: 1px solid rgba(0, 245, 255, .25) !important;
+      border-top: 1px solid rgba(125, 211, 252, .18) !important;
     }
 
     body.theme-pixel .topbtn {
-      border-radius: 0;
-      border: 2px solid var(--pixel-cyan);
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .3);
     }
 
     body.theme-pixel .grad {
-      background: linear-gradient(90deg, #00f5ff 0%, #ff00aa 40%, #aaff00 75%, #00f5ff 100%);
+      background: linear-gradient(135deg, #7dd3fc 0%, #c084fc 60%, #6ee7b7 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      filter: drop-shadow(0 2px 10px rgba(0, 245, 255, .5));
-    }
-
-    /* Pixel glow text effect on headings */
-    body.theme-pixel .hero-title {
-      text-shadow: 2px 2px 0 var(--pixel-magenta), 4px 4px 0 rgba(0, 245, 255, .2);
-    }
-
-    /* Pixel scan flicker */
-    @keyframes pixelScanFlicker {
-
-      0%,
-      95%,
-      100% {
-        opacity: 1;
-      }
-
-      96% {
-        opacity: 0.85;
-      }
-
-      97% {
-        opacity: 1;
-      }
-
-      98% {
-        opacity: 0.9;
-      }
-    }
-
-    body.theme-pixel {
-      animation: pixelScanFlicker 8s infinite;
+      filter: drop-shadow(0 2px 10px rgba(125, 211, 252, .25));
     }
 
     * {
@@ -2224,38 +2140,39 @@
 
     /* Pixel theme adaptation for theme picker */
     body.theme-pixel .themeTrigger {
-      border-radius: 0;
-      border: 2px solid var(--pixel-cyan);
-      box-shadow: 2px 2px 0 var(--pixel-magenta);
-      font-family: 'Press Start 2P', monospace !important;
-      font-size: 8px !important;
+      border-radius: 6px;
+      border: 1px solid rgba(125, 211, 252, .28);
+      background: rgba(18, 24, 40, .85);
+      color: #ffffff;
     }
 
     body.theme-pixel .themeMenu {
-      border-radius: 0;
-      border: 2px solid var(--pixel-cyan);
-      box-shadow: 4px 4px 0 var(--pixel-magenta);
-      background: #080018;
+      border-radius: 8px;
+      border: 1px solid rgba(125, 211, 252, .24);
+      background: #0f1422;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
     }
 
     body.theme-pixel .themeOption {
-      border-radius: 0;
+      border-radius: 4px;
     }
 
     body.theme-pixel .themeName {
-      font-size: 8px !important;
+      font-size: 13px !important;
     }
 
     body.theme-pixel .themeBadge {
-      font-size: 7px !important;
+      font-size: 11px !important;
+      color: rgba(125, 211, 252, .7) !important;
     }
 
     body.theme-pixel .themeMenuTag {
-      font-size: 7px !important;
+      font-size: 9px !important;
+      letter-spacing: .06em;
     }
 
     body.theme-pixel .themeSwatch {
-      border-radius: 0 !important;
+      border-radius: 4px !important;
     }
 
     .profile {
@@ -2811,16 +2728,17 @@
     }
 
     body.theme-pixel .casSongTag {
-      border-radius: 0 !important;
-      font-family: 'Press Start 2P', monospace !important;
-      font-size: 7px !important;
-      border-color: rgba(0, 245, 255, .25) !important;
+      border-radius: 4px !important;
+      font-size: 11px !important;
+      border-color: rgba(125, 211, 252, .2) !important;
+      background: rgba(125, 211, 252, .04) !important;
     }
 
     body.theme-pixel .casSongTag:hover,
     body.theme-pixel .casSongTag.active {
-      border-color: var(--pixel-cyan) !important;
-      box-shadow: 2px 2px 0 var(--pixel-magenta) !important;
+      border-color: var(--pixel-soft-cyan) !important;
+      background: rgba(125, 211, 252, .14) !important;
+      box-shadow: 0 2px 10px rgba(56, 189, 248, .2) !important;
     }
 
     /* Enhanced About Quote Card */
@@ -4458,15 +4376,17 @@
     body.theme-pixel .guestNoteInputWrap,
     body.theme-pixel .savedNoteBox,
     body.theme-pixel .contactRowItem {
-      border-radius: 0 !important;
-      border-color: rgba(0, 245, 255, .3) !important;
+      border-radius: 6px !important;
+      border-color: rgba(125, 211, 252, .18) !important;
     }
 
     body.theme-pixel .noteActionBtn,
     body.theme-pixel .miniCopyBtn {
-      border-radius: 0 !important;
-      font-family: 'Press Start 2P', monospace !important;
-      font-size: 7.5px !important;
+      border-radius: 4px !important;
+      border: 1px solid rgba(125, 211, 252, .25) !important;
+      background: rgba(125, 211, 252, .08) !important;
+      color: var(--pixel-soft-cyan) !important;
+      font-size: 11px !important;
     }
 
     /* ====================================================================
@@ -6012,19 +5932,19 @@
         shortName: "pixel mode",
         mobileIcon: "👾",
         triggerIcon: "👾🕹️",
-        pillText: "calm nights • 8-bit",
+        pillText: "calm nights • 8-bit lofi",
         toast: "theme: pixel mode 👾🕹️",
-        accent: "#00f5ff",
+        accent: "#38bdf8",
         sip: {
           title: "potion lab 👾🧪",
           drink: "8-bit mana elixir",
           slider1: "💖 HP Elixir",
           slider2: "⚡ Mana Surge",
-          color1: "#ff007f",
-          color2: "#00f5ff",
-          glowColor1: "rgba(255, 0, 127",
-          glowColor2: "rgba(0, 245, 255",
-          emojis: ["🧪", "👾", "💖", "⚡", "🕹️"],
+          color1: "#c084fc",
+          color2: "#38bdf8",
+          glowColor1: "rgba(192, 132, 252",
+          glowColor2: "rgba(56, 189, 248",
+          emojis: ["🧪", "👾", "✨", "⚡", "🕹️"],
           toast: "8-bit mana potion consumed! +100 HP 👾🧪"
         }
       },
@@ -7063,7 +6983,7 @@
         this.rot = Math.random() * Math.PI * 2;
         this.rotSpeed = (Math.random() - 0.5) * 0.02;
         this.type = Math.floor(Math.random() * 5);
-        this.opacity = isPixel ? Math.random() * 0.55 + 0.25 : (isKid ? Math.random() * 0.35 + 0.5 : Math.random() * 0.4 + 0.2);
+        this.opacity = isPixel ? Math.random() * 0.35 + 0.15 : (isKid ? Math.random() * 0.35 + 0.5 : Math.random() * 0.4 + 0.2);
       }
       update() {
         this.y += this.speedY;
@@ -7087,14 +7007,11 @@
         ctx.globalAlpha = this.opacity;
 
         if (isPixel) {
-          // Pixel neon square blocks
-          const pixelColors = ["#00f5ff", "#ff00aa", "#aaff00", "#ffee00", "#ff00aa"];
+          // Soft lofi pixel stars (gentle on eyes)
+          const pixelColors = ["#7dd3fc", "#c084fc", "#6ee7b7", "#38bdf8", "#e0f2fe"];
           ctx.fillStyle = pixelColors[this.type % pixelColors.length];
-          const ps = Math.round(this.size * 0.9);
+          const ps = Math.max(2, Math.round(this.size * 0.45));
           ctx.fillRect(-ps / 2, -ps / 2, ps, ps);
-          ctx.globalAlpha = this.opacity * 0.4;
-          ctx.fillStyle = "#000";
-          ctx.fillRect(-ps / 2 + 2, -ps / 2 + 2, ps - 2, ps - 2);
         } else if (isRain) {
           // Sleek neon rain streaks
           ctx.fillStyle = this.type % 2 === 0 ? "rgba(56, 189, 248, 0.85)" : "rgba(147, 197, 253, 0.75)";
@@ -7189,7 +7106,7 @@
         return ["#38bdf8", "#818cf8", "#60a5fa", "#e0f2fe", "#ffffff"];
       }
       if (document.body.classList.contains("theme-pixel")) {
-        return ["#00f5ff", "#ff00aa", "#aaff00", "#ffee00"];
+        return ["#7dd3fc", "#c084fc", "#6ee7b7", "#38bdf8", "#e0f2fe"];
       }
       if (document.body.classList.contains("theme-kidcore")) {
         return ["#ffd166", "#ff4d6d", "#00c48c", "#ff8fab", "#7209b7", "#4cc9f0"];

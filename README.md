@@ -53,7 +53,7 @@ Switch themes seamlessly on the fly with the floating Gen-Z glassmorphic picker:
 | **🍓 Matcha Signature** *(Default)* | Velvety dark tea & soft berry | Drifting strawberry petals, soft glowing badges, matcha neon accents |
 | **📼 CAS Midnight Monochrome** | Pure 100% film noir black & white | Deep black backgrounds, silver scanlines, grayscale photography & vinyl |
 | **🌧️ Rainy City** | Lo-fi rainy midnight blue | Neon cyan rain streaks on canvas, cool glassmorphic reflections |
-| **👾 Pixel Mode** | 8-bit retro arcade | Pixel borders, neon square confetti, *Press Start 2P* typography |
+| **👾 Pixel Mode** | 8-bit retro lofi cyber-night | Soft twilight cyan & lavender palette, calm ambient pixel stars, retro typography accents |
 | **🧸 Kidcore Sticker** | Playful pastel neo-brutalism | Chunky 2.5px dark borders, bold sticker drop-shadows, candy pill buttons |
 
 ---
